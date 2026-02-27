@@ -1,0 +1,116 @@
+
+
+/* NAVBAR STYLING */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: fit-content;
+    background-color: rgb(26, 26, 26);
+    padding: 16px 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 32px rgb(32, 32, 32);
+    opacity: 0.99;
+}
+
+#logo {
+    height: 64px;
+}
+
+#navbar-options {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+
+/* HERO SECTION STYLING */
+
+em {
+    color: var(--color-green);
+    font-style: normal;
+}
+
+#hero {
+    background: linear-gradient(to bottom right, #141414, #535353);
+    display: flex;
+    flex-direction: column;
+    padding: 20rem 0 20rem 20rem;
+}
+
+#hero-top-half {
+    flex: 3;
+    display: flex;
+}
+
+#hero-top-half-left {
+    flex: 4;
+    
+}
+
+#hero-cta-buttons {
+    display: flex;
+    gap: 32px;
+    /* justify-content: space-between; */
+    
+}
+
+#hero-top-half-right {
+    flex: 4;
+}
+
+#hero-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-bottom-left-radius: 276px;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 45px;
+}
+
+#hero-bottom-half {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: red; */
+    padding: 8rem 20rem 0 0;
+}
+
+#categorias-de-concurso {
+    background-color: #FFFFFF;
+}
+
+#left-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* background-color: red; */
+    /* padding: right; */
+}
+
+.hero-data-showcase {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.numeric-data {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.numeric-context {
+    font-size: 2rem;
+    border-top: 2px solid white;
+}
+
+
+

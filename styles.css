@@ -6,4 +6,59 @@
 
 html {
     font-size: 62.5%;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    color: #FFF;
+}
+
+section {
+    padding: 20rem;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 5.6rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+    letter-spacing: 35%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    padding: 16px 44px;
+    border: none;
+    font-size: 2rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* CLASSES */
+
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-size: 6.4rem;
 }

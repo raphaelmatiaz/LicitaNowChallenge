@@ -16,17 +16,19 @@
     padding-left: 24px;
     color: white;
     border: 1px solid lightgrey;
+    min-width: 0;
 }
 
 ::placeholder {
   color: white;
-  opacity: 0.5; /* Firefox */
+  opacity: 0.5;
 }
 
 #footer form {
     display: flex;
     height: 64px;
     gap: 8px;
+    width: 100%;
 }
 
 #footer a {
@@ -168,3 +170,157 @@
 
 /* ROW C */
 
+
+/* ============================================================
+   MEDIA QUERIES — RESPONSIVE (added below, desktop untouched)
+   ============================================================ */
+
+/* ---------- TABLET (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+
+    #footer {
+        padding: 48px 48px 0 48px;
+    }
+
+    /* Row A: keep 3 cols but tighten padding */
+    .footer-col {
+        padding: 32px 16px 0 0;
+    }
+
+    /* Row B: stack the three blocks into a 2-col grid */
+    #footer-row-B {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 24px;
+    }
+
+    /* Newsletter spans full width on tablet */
+    #footer-col-B-2:last-child {
+        grid-column: 1 / -1;
+        padding-right: 0;
+    }
+
+    /* Prevent input from being squashed — form stays side by side */
+    #footer input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #footer form {
+        width: 100%;
+    }
+
+    #prr-img {
+        width: 480px;
+    }
+}
+
+
+/* ---------- MOBILE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+    #footer {
+        padding: 40px 24px 0 24px;
+    }
+
+    /* Row A: stack all 3 columns vertically */
+    #footer-row-A {
+        flex-direction: column;
+    }
+
+    /* Row B: also stack vertically */
+    #footer-row-B {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Each col full-width, remove right padding, add bottom spacing */
+    .footer-col {
+        flex: unset;
+        width: 100%;
+        padding: 24px 0 0 0;
+    }
+
+    /* Give each stacked block a subtle separator */
+    #footer-row-A .footer-col + .footer-col,
+    #footer-row-B .footer-col + .footer-col {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 28px;
+        margin-top: 4px;
+    }
+
+    /* Logo column: center everything on mobile */
+    #footer-col-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-col-1 .social-link-button-list {
+        justify-content: center;
+    }
+
+    /* Form: stack input + button on very narrow screens */
+    #footer form {
+        flex-direction: column;
+        height: auto;
+        gap: 12px;
+    }
+
+    #footer input {
+        font-size: 1.6rem;
+        padding: 14px 16px;
+        height: 52px;
+    }
+
+    .footer-form-button {
+        height: 52px;
+        font-size: 1.4rem;
+    }
+
+    /* PRR banner: scale down proportionally */
+    #prr-img {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    /* Row D copyright: allow text to wrap neatly */
+    #footer-row-D {
+        text-align: center;
+        flex-wrap: wrap;
+        padding: 20px 16px;
+        font-size: 0.9rem;
+    }
+
+    /* Row E links: wrap and tighten gap */
+    #footer-row-E {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px 16px 24px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ---------- SMALL MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+    #footer {
+        padding: 32px 16px 0 16px;
+    }
+
+    #logo {
+        width: 140px;
+    }
+
+    .payment-method-img {
+        width: 52px;
+    }
+
+    #footer-row-E {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}

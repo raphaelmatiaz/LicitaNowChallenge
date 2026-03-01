@@ -33,10 +33,95 @@
 .principio-card-img {
     height: 65px;
     width: 65px;
+    background-size: contain;        /* ADD */
+    background-position: center;     /* ADD */
+    background-repeat: no-repeat;    /* ADD */
 }
 
 .principio-card-title {
     font-size: 2rem;
     font-weight: 600;
     margin: 24px 0 16px 0;
+}
+
+
+
+
+
+
+/* ============================================================
+   MEDIA QUERIES — RESPONSIVE (added below, desktop untouched)
+   ============================================================ */
+
+/* ---------- TABLET (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+
+    /* 2×2 grid — cards have breathing room without going full-width */
+    .principio-card-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px 32px;
+        justify-items: center;
+    }
+
+    .principio-card {
+        max-width: 320px;
+        width: 100%;
+    }
+}
+
+
+/* ---------- MOBILE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+    /* Single column, cards stretch to fill available width */
+    .principio-card-list {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .principio-card {
+        max-width: 480px;
+        width: 100%;
+        /* Shift to a horizontal layout: icon left, text right */
+        flex-direction: row;
+        text-align: left;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    /* Lock the icon so it doesn't shrink when text is long */
+    .principio-card-img-wrapper {
+        flex-shrink: 0;
+    }
+
+    .principio-card-title {
+        margin: 0 0 8px 0;
+    }
+}
+
+
+/* ---------- SMALL MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+    .principio-card {
+        gap: 16px;
+    }
+
+    .principio-card-img-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .principio-card-img {
+        width: 52px;
+        height: 52px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .principio-card-title {
+        font-size: 1.7rem;
+    }
 }

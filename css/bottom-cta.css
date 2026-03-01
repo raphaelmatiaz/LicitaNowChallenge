@@ -28,3 +28,70 @@
 #bottom-cta-content-wrapper h5 {
     margin-bottom: 52px;
 }
+
+
+
+
+
+
+
+/* ============================================================
+   MEDIA QUERIES — RESPONSIVE (added below, desktop untouched)
+   ============================================================ */
+
+/* ---------- TABLET (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+
+    #bottom-cta {
+        height: 600px;
+    }
+
+    /* Ensure the overlay fills the full section — no inherited width constraints */
+    #bottom-cta-content-wrapper {
+        width: 100%;
+        padding: 0 80px;
+        box-sizing: border-box;
+    }
+}
+
+
+/* ---------- MOBILE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+    #bottom-cta {
+        height: auto;
+        min-height: 520px;
+        background-position: center top;
+    }
+
+    /* Full-width overlay, generous vertical padding so it breathes,
+       modest horizontal padding so text has room to expand */
+    #bottom-cta-content-wrapper {
+        width: 100%;
+        padding: 72px 32px;
+        box-sizing: border-box;
+    }
+
+    #bottom-cta-content-wrapper h5 {
+        margin-bottom: 36px;
+    }
+}
+
+
+/* ---------- SMALL MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+    #bottom-cta {
+        min-height: 480px;
+    }
+
+    #bottom-cta-content-wrapper {
+        width: 100%;
+        padding: 56px 20px;
+        box-sizing: border-box;
+    }
+
+    #bottom-cta-content-wrapper h5 {
+        margin-bottom: 28px;
+    }
+}

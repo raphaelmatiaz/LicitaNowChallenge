@@ -1,5 +1,3 @@
-
-
 /* NAVBAR STYLING */
 
 nav {
@@ -21,15 +19,83 @@ nav {
 #burger-menu {
     width: 32px;
     display: none;
+    cursor: pointer;
 }
 
+/* Reset the global nav rule for the mobile overlay */
 #navbar-mobile {
-    display: none;
+    display: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgb(26, 26, 26) !important;
+    z-index: 100 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#navbar-mobile.open {
+    display: flex !important;
+}
+
+#navbar-mobile #mobile-logo {
     position: absolute;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    opacity: 1;
+    top: 24px;
+    left: 24px;
+    height: 48px;
+}
+
+#close-menu {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-size: 4rem;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: 200;
+}
+
+#navbar-options-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+#navbar-options-mobile li a {
+    font-size: 2.4rem;
+    color: white;
+    text-decoration: none;
+}
+
+#navbar-options-mobile li a:hover {
+    color: var(--color-green);
+}
+
+#navbar-options-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+#navbar-options-mobile li a {
+    font-size: 2.4rem;
+    color: white;
+    text-decoration: none;
+}
+
+#navbar-options-mobile li a:hover {
+    color: var(--color-green);
 }
 
 #logo {
@@ -60,30 +126,27 @@ em {
 #hero-top-half {
     flex: 3;
     display: flex;
+    gap: 4px;
 }
 
 #hero-top-half-left {
     flex: 4;
-    /* background-color: red; */
-
 }
 
 #hero-cta-buttons {
     display: flex;
     gap: 32px;
     margin-top: 32px;
-    /* justify-content: space-between; */
-    
 }
 
 #hero-top-half-right {
     flex: 4;
     box-shadow: 16px -16px 48px rgb(0, 0, 0) inset;
-    border: 8px solid #535353;
+    border: 4px solid #535353;
+    padding-left: 32px;
 }
 
 .hero-img {
-
     display: block;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,12 +162,7 @@ em {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    /* background-color: red; */
     padding: 8rem 20rem 0 0;
-}
-
-#categorias-de-concurso {
-    background-color: #FFFFFF;
 }
 
 #left-content-wrapper {
@@ -112,15 +170,13 @@ em {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    /* background-color: red; */
-    /* padding: right; */
 }
 
 .hero-data-showcase {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .numeric-data {
@@ -130,22 +186,22 @@ em {
 
 .numeric-context {
     font-size: 2rem;
-
     text-align: center;
 }
 
 
+/* ============================================================
+   MEDIA QUERIES — RESPONSIVE (consolidated & cleaned up)
+   ============================================================ */
 
-@media (max-width: 1200px) {
-    .numeric-context {
-         overflow-wrap: break-word;
-         max-width: 200px;
+/* ---------- TABLET (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+
+    /* Collapse desktop nav links, show burger */
+    nav#navbar {
+        padding: 16px 4rem;
     }
-}
 
-
-/* TABLET */
-@media (max-width: 1263px) {
     #navbar-options {
         display: none;
     }
@@ -154,52 +210,116 @@ em {
         display: block;
     }
 
-    
-}
-
-@media (max-width: 1355px) { 
-
-#hero-top-half-right {
+    /* Hide the hero image — let text breathe centred */
+    #hero-top-half-right {
         display: none;
         flex: 0;
     }
 
-#hero-top-half-left {
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    #hero {
+        padding: 18rem 6rem 10rem 6rem;
+        align-items: center;
+    }
+
+    #hero-top-half {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #hero-top-half-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: unset;
+        width: 100%;
+    }
+
+    #left-content-wrapper {
+        max-width: 72rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    #hero-cta-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #hero-bottom-half {
+        padding: 6rem 2rem 0 2rem;
+        gap: 24px;
+    }
+
+    .numeric-context {
+        max-width: 160px;
+        overflow-wrap: break-word;
+    }
 }
 
-#left-content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: red; */
-    max-width: 80rem;
-    text-align: center;
+
+/* ---------- MOBILE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+    nav#navbar {
+        padding: 16px 2.4rem;
+    }
+
+    #logo {
+        height: 48px;
+        
+    }
+
+    #hero {
+        padding: 14rem 2.4rem 8rem 2.4rem;
+    }
+
+    #left-content-wrapper {
+        max-width: 100%;
+    }
+
+    /* Stack CTA buttons vertically on mobile */
+    #hero-cta-buttons {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+    #hero-cta-buttons button {
+        width: 100%;
+    }
+
+    #hero-bottom-half {
+        padding: 4rem 0 0 0;
+        gap: 16px;
+    }
+
+    .numeric-data {
+        font-size: 3.2rem;
+    }
+
+    .numeric-context {
+        font-size: 1.6rem;
+        max-width: 120px;
+    }
 }
 
-#hero {
-    display: flex;
-    flex-direction: column;
-    padding: 20rem 10rem;
-}
 
-#hero-bottom-half {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    padding: 8rem;
-    /* background-color: blue; */
-}
+/* ---------- SMALL MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
 
+    #hero {
+        padding: 12rem 1.6rem 6rem 1.6rem;
+    }
 
+    /* Stack stats vertically on very small screens */
+    #hero-bottom-half {
+        flex-direction: column;
+        gap: 28px;
+        padding-top: 4rem;
+    }
 
-h2 {
-    padding: 16px 2%;
-}
+    .numeric-context {
+        max-width: 100%;
+    }
+    
 }

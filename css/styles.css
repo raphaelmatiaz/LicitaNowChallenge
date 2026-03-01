@@ -123,7 +123,121 @@ button:hover {
 
 
 
+/* ============================================================
+   MEDIA QUERIES — RESPONSIVE (added below, desktop untouched)
+   ============================================================ */
 
+/* ---------- TABLET (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+
+    /* 20rem padding is ~200px — far too much on a tablet */
+    section {
+        padding: 10rem 6rem;
+        min-height: unset;
+    }
+
+    /* 35% max-width produces a very narrow text block on tablet */
+    .section-header-wrapper {
+        max-width: 60%;
+        margin-bottom: 64px;
+    }
+
+    h1 {
+        font-size: 4.8rem;
+    }
+
+    h4 {
+        font-size: 2.8rem;
+    }
+
+    .oswald {
+        font-size: 5.2rem;
+    }
+}
+
+
+/* ---------- MOBILE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+    section {
+        padding: 6rem 2.4rem;
+        min-height: unset;
+    }
+
+    /* Full width — 35% on mobile would be a tiny sliver */
+    .section-header-wrapper {
+        max-width: 100%;
+        margin-bottom: 48px;
+    }
+
+    /* Scale the type system down proportionally */
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        padding: 0 16px;
+    }
+
+    h3 {
+        font-size: 2rem;
+        padding-left: 16px;
+    }
+
+    h4 {
+        font-size: 2.4rem;
+        margin: 16px 0 28px 0;
+    }
+
+    h5 {
+        font-size: 2rem;
+    }
+
+    h6 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1.6rem;
+        padding: 14px 32px;
+    }
+
+    .oswald {
+        font-size: 4rem;
+    }
+
+    /* Thinner left border accent looks better at smaller sizes */
+    .section-header {
+        border-left-width: 5px;
+        padding-left: 20px;
+    }
+}
+
+
+/* ---------- SMALL MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+    section {
+        padding: 4.8rem 1.6rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h4 {
+        font-size: 2.2rem;
+    }
+
+    h5 {
+        font-size: 1.8rem;
+    }
+
+    .oswald {
+        font-size: 3.4rem;
+    }
+}
 
 
 

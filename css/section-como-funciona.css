@@ -59,3 +59,108 @@
 .step-details {
     margin-top: 14px;
 }
+
+
+
+
+
+
+
+
+/* ============================================================
+   MEDIA QUERIES — RESPONSIVE (added below, desktop untouched)
+   ============================================================ */
+
+/* ---------- TABLET (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+
+    /* 2×2 grid — preserves the visual weight of the circles */
+    #steps-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px 32px;
+        justify-items: center;
+    }
+
+    .step {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+
+/* ---------- MOBILE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+    /* Single column, horizontal layout: circle left, text right */
+    #steps-section {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .step {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    /* Lock circle size so it doesn't shrink */
+    .step-circle {
+        flex-shrink: 0;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0;
+    }
+
+    .step-img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .step-number-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 1.6rem;
+        top: -6px;
+        right: -6px;
+    }
+
+    .step-title {
+        font-size: 2rem;
+    }
+
+    .step-details {
+        margin-top: 8px;
+    }
+}
+
+
+/* ---------- SMALL MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+    #steps-section {
+        gap: 32px;
+    }
+
+    .step-circle {
+        width: 84px;
+        height: 84px;
+    }
+
+    .step-img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .step-number-circle {
+        width: 30px;
+        height: 30px;
+        font-size: 1.4rem;
+        top: -5px;
+        right: -5px;
+    }
+}

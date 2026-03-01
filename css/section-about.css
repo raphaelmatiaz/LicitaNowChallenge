@@ -20,12 +20,11 @@
 
 #company-card-data {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 24px;
-    padding: 0 10%;
+    align-content: center;
+    padding: 0 5%;
 }
 
 .about-paragraph {
@@ -54,4 +53,85 @@
 
 .about-card-details {
     font-weight: 300;
+}
+
+
+
+
+
+
+
+
+/* ============================================================
+   MEDIA QUERIES — RESPONSIVE (added below, desktop untouched)
+   ============================================================ */
+
+/* ---------- TABLET (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+
+    /* Stack text and stats vertically */
+    #about-block {
+        flex-direction: column;
+    }
+
+    #company-info {
+        flex: unset;
+        width: 100%;
+        margin-bottom: 48px;
+    }
+
+    #company-card-data {
+        flex: unset;
+        width: 100%;
+        padding: 0;
+        /* 2x2 grid for the 4 stat cards */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .about-card-data {
+        width: 100%;
+        height: auto;
+        padding: 32px 20px;
+    }
+}
+
+
+/* ---------- MOBILE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+    #company-info {
+        margin-bottom: 40px;
+    }
+
+    /* Keep 2-col grid on mobile — 4 cards in a row would be too narrow,
+       full single column would make the section very long */
+    #company-card-data {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .about-card-data {
+        padding: 24px 16px;
+    }
+
+    .about-card-number {
+        font-size: 2.4rem;
+    }
+}
+
+
+/* ---------- SMALL MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+    /* On very small screens, single column reads better */
+    #company-card-data {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-card-number {
+        font-size: 2.2rem;
+    }
 }

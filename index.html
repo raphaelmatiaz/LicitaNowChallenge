@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="variables.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="modifiers.css">
-    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/modifiers.css">
+
+    <link rel="stylesheet" href="/css/section-hero.css">
+    <link rel="stylesheet" href="/css/section-concursos.css">
+    <link rel="stylesheet" href="/css/section-como-funciona.css">
+    <link rel="stylesheet" href="/css/section-about.css">
+    <link rel="stylesheet" href="/css/bottom-cta.css">
+    <link rel="stylesheet" href="/css/section-principios.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
     <!-- INTER FONT - GOOGLE FONTS INTEGRATION -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,57 +25,511 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jacques+Francois&family=Jua&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
+    <script src="main.js" defer></script>
+
     <title>LicitaNow</title>
 </head>
 <body>
-    <section id="hero">
-        <nav id="navbar">
-            <img id="logo" src="/media/logo.png" alt="Logotipo da empresa LicitaNow">
+  <!-- HERO -->
+  <section id="hero">
+    <nav id="navbar">
+        <img id="logo" src="/media/logo-blue.png" alt="Logotipo da empresa LicitaNow">
 
-            <ul id="navbar-options">
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Funcionamento</a></li>
-                <li><a href="#">Soluções</a></li>
-                <li><a href="#">Suporte</a></li>
-                <li><a href="#">Carreiras</a></li>
-                <li><button class="button-green">Login</button></li>
-            </ul>
-        </nav>
-        <div id="hero-top-half">
-            <div id="hero-top-half-left">
-                <div id="left-content-wrapper">
-                    <h1><em cla>PUBLIQUE OU LICITE</em> <br> <strong class="oswald">CONCURSOS E SERVIÇOS</strong> <br> NO SETOR DA <strong class="oswald">CONSTRUÇÃO</strong></h1>
-                    <h2>Crie concursos grátis  e receba propostas ou  encontre o seu próximo cliente 100% Online</h2>
-                    <div id="hero-cta-buttons">
-                        <button class="button-green">CRIAR CONCURSO GRÁTIS &#8594;</button>
-                        <button>LICITAR CONCURSOS &#8594;</button>
-                    </div>
+        <ul id="navbar-options">
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Funcionamento</a></li>
+            <li><a href="#">Soluções</a></li>
+            <li><a href="#">Suporte</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><button class="button-green">Login</button></li>
+        </ul>
+        <img id="burger-menu" src="/media/menu.png" alt="">
+    </nav>
+
+    <nav id="navbar-mobile">
+        <img id="logo" src="/media/logo.png" alt="Logotipo da empresa LicitaNow">
+
+        <ul id="navbar-options-mobile">
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Funcionamento</a></li>
+            <li><a href="#">Soluções</a></li>
+            <li><a href="#">Suporte</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><button class="button-green">Login</button></li>
+        </ul>
+    </nav>
+
+    <div id="hero-top-half">
+        <div id="hero-top-half-left">
+            <div id="left-content-wrapper">
+                <h1><em style="font-weight: 900;">PUBLIQUE OU LICITE</em> <br> <strong class="oswald">CONCURSOS E SERVIÇOS</strong> <br> NO SETOR DA <strong class="oswald">CONSTRUÇÃO</strong></h1>
+                <h2>Crie concursos grátis  e receba propostas ou  encontre o seu próximo cliente 100% Online</h2>
+                <div id="hero-cta-buttons">
+                    <button class="button-green">CRIAR CONCURSO GRÁTIS &#8594;</button>
+                    <button>LICITAR CONCURSOS &#8594;</button>
                 </div>
             </div>
-            <div id="hero-top-half-right">
-                <img id="hero-img" src="/media/hero-img.webp" alt="Fotografia de diversos prédios em obras">
-            </div>
         </div>
-        <div id="hero-bottom-half">
-            <div class="hero-data-showcase">
-                <p class="numeric-data"><em>500+</em></p>
-                <p class="numeric-context">CONCURSOS FINALIZADOS</p>
-            </div>
-            <div class="hero-data-showcase">
-                <p class="numeric-data"><em>80+</em></p>
-                <p class="numeric-context">CONCURSOS ATIVOS</p>
-            </div>
-            <div class="hero-data-showcase">
-                <p class="numeric-data"><em>1200+</em></p>
-                <p class="numeric-context">UTILIZADORES DIÁRIOS</p>
-            </div>
+        <div id="hero-top-half-right" class="hero-img" style="background-image: url(/media/hero-img.webp);"></div>
+    </div>
+    <div id="hero-bottom-half">
+        <div class="hero-data-showcase">
+            <p class="numeric-data"><em>500+</em></p>
+            <p class="numeric-context">CONCURSOS FINALIZADOS</p>
         </div>
-       
-    </section>
-    <section id="categorias-de-concurso"></section>
-    <section id="como-funciona"></section>
-    <section id="sobre"></section>
-    <section id="principios"></section>
-    <footer id="footer"></footer>
+        <div class="hero-data-showcase">
+            <p class="numeric-data"><em>80+</em></p>
+            <p class="numeric-context">CONCURSOS ATIVOS</p>
+        </div>
+        <div class="hero-data-showcase">
+            <p class="numeric-data"><em>1200+</em></p>
+            <p class="numeric-context">UTILIZADORES DIÁRIOS</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- TIPOS DE CONCURSO -->
+<section id="categorias-de-concurso">
+  
+  
+  <div class="section-header-wrapper">
+    <h3>Categorias de Concurso</h3>
+    <div class="section-header">
+      <h4>QUE TIPOS DE CONCURSOS PODE CRIAR?</h4>
+      <h5>A nossa plataforma suporta todos os tipos de concursos ligados ao setor da construçao</h5>
+    </div>
+  </div>
+
+  <div class="cards-container">
+    
+    <div class="concurso-card">
+      <div class="concurso-card-img" style="background-image: url(/media/concurso-construcao.jpg);"></div>
+      <div class="concurso-card-info">
+        <p class="concurso-card-title">Concursos de Construção</p>
+        <p class="concurso-card-details">Publique concursos para obras novas, remodelações, legalizações ou ampliações, e encontre as melhores empresas para o seu projeto.</p>
+      </div>
+    </div>
+
+    
+    <div class="concurso-card">
+      <div class="concurso-card-img" style="background-image: url(/media/concurso-servicos.jpg);"></div>
+      <div class="concurso-card-info">
+        <p class="concurso-card-title">Concursos de Serviços</p>
+        <p class="concurso-card-details">Gestão de obra, fiscalização, arquitetura, engenharia, topografia e outros serviços técnicos, tudo com total transparência e controlo.</p>
+      </div>
+    </div>
+
+    
+    <div class="concurso-card">
+      <div class="concurso-card-img" style="background-image: url(/media/concurso-subcontratacao.jpg);"></div>
+      <div class="concurso-card-info">
+        <p class="concurso-card-title">Concursos de Subcontratação</p>
+        <p class="concurso-card-details">Encontre subempreiteiros especializados para fases específicas da contrução desde estruturas a acabamentos.</p>
+      </div>
+    </div>
+
+    
+    <div class="concurso-card">
+      <div class="concurso-card-img" style="background-image: url(/media/concurso-outros.jpg);"></div>
+      <div class="concurso-card-info">
+        <p class="concurso-card-title">Outros Concursos</p>
+        <p class="concurso-card-details">Organize concursos para o aluguer de equipamentos, fornecimento de materiais de construção ou qualquer outra necessidade do setor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SECTION COMO FUNCTIONA -->
+  <section id="como-funciona">
+
+    <div class="section-header-wrapper">
+        <h3>Um Processo Simples</h3>
+        <div class="section-header" style="border-left: 8px solid black;">
+          <h4>COMO FUNCIONA?</h4>
+          <h5>Da criação do concurso à conclusão do projeto em quatro passos simples</h5>
+        </div>
+    </div>
+
+    <div id="steps-section">
+      
+      <div class="step">
+        <div class="step-circle">
+          <div class="step-number-circle">1</div>
+          <img class="step-img" src="/media/Document.png" alt="">
+        </div>
+        <div class="step-details">
+          <p class="step-title">Criar Concurso</p>
+          <p class="step-details">Publique o seu projeto com todos os requisitos detalhados</p>
+        </div>
+
+      </div>
+      <div class="step">
+        <div class="step-circle">
+          <div class="step-number-circle">2</div>
+          <img class="step-img" src="/media/Time.png" alt="">
+        </div>
+        <div class="step-details">
+          <p class="step-title">Receber Propostas</p>
+          <p class="step-details">Publique o seu projeto com todos os requisitos detalhados</p>
+        </div>
+
+      </div>
+      <div class="step">
+        <div class="step-circle">
+          <div class="step-number-circle">3</div>
+          <img class="step-img" src="/media/Trophy.png" alt="">
+        </div>
+        <div class="step-details">
+          <p class="step-title">Vencedor Automático</p>
+          <p class="step-details">Publique o seu projeto com todos os requisitos detalhados</p>
+        </div>
+
+      </div>
+      <div class="step">
+        <div class="step-circle">
+          <div class="step-number-circle">4</div>
+          <img class="step-img" src="/media/Typing.png" alt="">
+        </div>
+        <div class="step-details">
+          <p class="step-title">Pós Concurso</p>
+          <p class="step-details">Publique o seu projeto com todos os requisitos detalhados</p>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <section id="sobre">
+    <div class="section-header-wrapper">
+        <h3>Sobre a LicitaNow</h3>
+        <div class="section-header" style="border-left: 8px solid black;">
+          <h4>A NOVA GERAÇÃO DE CONCURSOS ONLINE</h4>
+          <h5>Da criação do concurso à conclusão do seu projeto em quatro passos simples</h5>
+        </div>
+    </div>
+
+    <div id="about-block">
+
+      <div id="company-info">
+        <p class="about-paragraph">Fornecemos soluções digitais inovadoras para o setor da construção, simplificando e otimizando todo o processo de contratação e gestão de projetos. A LicitaNow garante eficiência, fiabilidade e rigor em cada etapa, desde a organização de concursos até à fiscalização de obras privadas e públicas.</p>
+        <p class="about-paragraph">A nossa plataforma permite que particulares, empresas e profissionais da construção civil submetam propostas para execução de obras, projetos de arquitetura e especialidades, assim como para outras necessidades específicas dos Donos de Obra.</p>
+        <p class="about-paragraph">Os participantes apresentam as suas propostas diretamente na plataforma, sendo geralmente adjudicada a proposta mais baixa. Em caso de incumprimento contratual, asseguramos a substituição pela proposta imediatamente seguinte mais vantajoso.</p>
+        <p class="about-paragraph">A LicitaNow abrange diversos segmentos, incluindo bens físicos, serviços, imóveis e produtos relacionados com a construção civil, bem como produtos digitais associados ao setor.</p>
+      </div>
+
+      <div id="company-card-data">
+        <div class="about-card-data">
+          <p class="about-card-number">500+</p>
+          <p class="about-card-details">Projetos Concluidos</p>
+        </div>
+
+
+        <div class="about-card-data">
+          <p class="about-card-number">500+</p>
+          <p class="about-card-details">Projetos Concluidos</p>
+        </div>
+
+
+      
+        <div class="about-card-data">
+          <p class="about-card-number">500+</p>
+          <p class="about-card-details">Projetos Concluidos</p>
+        </div>
+
+
+      
+        <div class="about-card-data">
+          <p class="about-card-number">500+</p>
+          <p class="about-card-details">Projetos Concluidos</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <section id="principios">
+    <div class="section-header-wrapper" style="color: black;">
+      <h3>Sobre a LicitaNow</h3>
+      <div class="section-header">
+        <h4>OS NOSSOS PRINCÍPIOS</h4>
+        <h5>Confiança, transparência e valor. Estes princípios orientam tudo o que fazemos</h5>
+      </div>
+    </div>
+
+    <div class="principio-card-list">
+        <div class="principio-card">
+          <div class="principio-card-img-wrapper">
+            <div class="principio-card-img" style="background-image: url(/media/no-fees.png);"></div>
+          </div>
+          <div class="principio-card-info">
+            <p class="principio-card-title">Sem Subscrição</p>
+            <p class="principio-card-details">Pague apenas pelo que utiliza. Sem taxas ocultas, sem encargos recorrentes, sem compromissos</p>
+          </div>
+        </div>
+
+        <div class="principio-card">
+          <div class="principio-card-img-wrapper">
+            <div class="principio-card-img" style="background-image: url(/media/eye.png);"></div>
+          </div>
+          <div class="principio-card-info">
+            <p class="principio-card-title">Transparência</p>
+            <p class="principio-card-details">Visibilidade total sobre todos os processos, preços e progresso dos projetos. O que vê é exatamente o que obtém</p>
+          </div>
+        </div>
+
+        <div class="principio-card">
+          <div class="principio-card-img-wrapper">
+            <div class="principio-card-img" style="background-image: url(/media/document-2.png);"></div>
+          </div>
+          <div class="principio-card-info">
+            <p class="principio-card-title">Criar Concursos Grátis</p>
+            <p class="principio-card-details">Inicie o seu concurso sem custos. Obtenha propostas competitivas de empreiteiros qualificados sem taxas iniciais</p>
+          </div>
+        </div>
+
+        <div class="principio-card">
+          <div class="principio-card-img-wrapper">
+            <div class="principio-card-img" style="background-image: url(/media/teamwork.png);"></div>
+          </div>
+          <div class="principio-card-info">
+            <p class="principio-card-title">Colaboradores</p>
+            <p class="principio-card-details">Adira ao nosso programa de colaboradores e receba uma percentagem dos créditos utilizados pelos convidados que trouxe para a plataforma</p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+
+    <section id="bottom-cta">
+    <div id="bottom-cta-content-wrapper">
+      <h4>TRANSFORME O SEU NEGÓCIO DE CONSTRUÇÂO HOJE</h4>
+      <h5>Junte-se à revolução da construção. Comece a criar ou licitar em leilões e descubra novas oportunidades na indústria.</h5>
+      <button class="button" style="min-width: 80%; ">COMEÇAR AGORA &#8594;</button>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer id="footer">
+    <div id="footer-content-wrapper">
+      
+      <div id="footer-row-A">
+        <div id="footer-col-1" class="footer-col">
+           <img id="logo" style="margin-bottom: 20px;" src="/media/logo-blue.png" alt="Logotipo da empresa LicitaNow">
+           <p style="margin-bottom: 20px;">Gestão de propostas transparentes baseadas em concursos. A ligar proprietários a empreiteiros desde 2025.</p>
+            <ul class="social-link-button-list">
+              
+              <a></a><li class="social-link">
+               <img class="social-link-img" src="/media/facebook.png" alt="">
+              </li></a>
+
+              <li class="social-link"><a>
+               <img class="social-link-img" src="/media/instagram.png" alt="">
+              </a></li>
+
+              <li class="social-link"><a>
+               <img class="social-link-img" src="/media/x.png" alt="">
+              </a></li>
+
+              <li class="social-link"><a>
+               <img class="social-link-img" src="/media/linkdin.png" alt="">
+              </a></li>
+            </ul>
+        </div>
+
+        <div id="footer-col-2" class="footer-col">
+          <ul class="footer-vertical-item-ul">
+            <h6>LINKS ÚTEIS</h6>
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img src="/media/sobre.png" alt=""></div>
+                <p>Sobre Nós</p>
+              </div>
+            </a></li>
+
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img src="/media/creditos_header.png" alt=""></div>
+                <p>Créditos</p>
+              </div>
+            </a></li>
+
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img src="/media/precos.png" alt=""></div>
+                <p>Preços</p>
+              </div>
+            </a></li>
+
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img src="/media/eventos.png" alt=""></div>
+                <p>Eventos</p>
+              </div>
+            </a></li>
+
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </div>
+
+        <div id="footer-col-3" class="footer-col">
+
+          <ul class="footer-vertical-item-ul">
+            <h6>AS NOSSAS SOLUÇÕES</h6>
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img src="/media/concursos.png" alt=""></div>
+                <p>Concursos</p>
+              </div>
+            </a></li>
+
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img src="/media/servicos.png" alt=""></div>
+                <p>Serviços</p>
+              </div>
+            </a></li>
+
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img src="/media/arquivo.png" alt=""></div>
+                <p>Arquivo</p>
+              </div>
+            </a></li>
+
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img src="/media/intervencao.png" alt=""></div>
+                <p>Intervenções</p>
+              </div>
+            </a></li>
+
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img src="/media/colab.png" alt=""></div>
+                <p>Colaboração</p>
+              </div>
+            </a></li>
+
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="footer-row-B" class="footer-row">
+        <div id="footer-col-B-1" class="footer-col">
+
+          <ul class="footer-vertical-item-ul">
+            <h6>ENTRE EM CONTACTO</h6>
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img class="footer-icon" src="/media/arrow.png" alt=""></div>
+                <p>geral@licitanow.com</p>
+              </div>
+            </a></li>
+
+            <li><a href="">
+              <div class="list-item-content">
+                <div class="list-item-img"><img class="footer-icon" src="/media/arrow.png" alt=""></div>
+                <p>contabilidade@macrislda.com</p>
+              </div>
+            </a></li>
+          </ul>
+        </div>
+
+        <div id="footer-col-B-2" class="footer-col">
+          <h6>MÉTODOS DE PAGAMENTO</h6>
+          <ul class="footer-horizontal-item-ul" id="payment-methods">
+            <li><img class="payment-method-img" src="/media/visa.png" alt=""></li>
+            <li><img class="payment-method-img" src="/media/mastercard.png" alt=""></li>
+            <li><img class="payment-method-img" src="/media/multibanco.png" alt=""></li>
+          </ul>
+        </div>
+
+        <div id="footer-col-B-2" class="footer-col">
+          <h6>SUBSCREVA A NOSSA NEWSLETTER</h6>
+          <p style="margin: 20px 0;">Fique a par dos nossos projetos mais recentes e das tendências do setor.</p>
+          <form action="POST">
+            <input type="text" placeholder="Insira o seu email">
+            <button class="footer-form-button" type="submit">Submeter</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="footer-row-C">
+      <img id="prr-img" src="/media/prr_barra.png" alt="">
+    </div>
+
+    <div id="footer-row-D">
+      ® 2025 LicitaNow. Marca registada, propriedade de <a style="padding-left: 4px; text-decoration: underline;" href="https://macrislda.com/" target="_blank"> Macris Lda</a>. Todos os direitos reservados.
+    </div>
+
+     <div id="footer-row-E">
+      <a href="">Politica de Privacidade</a>
+      <a href="">Termos e Condições</a>
+      <a href="">Livro de Reclamações</a>
+    </div>
+
+    </div>
+  </footer>
 </body>
 </html>

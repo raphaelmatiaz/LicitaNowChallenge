@@ -1,0 +1,170 @@
+#footer {
+    background-color: #222;
+    padding: 64px 256px 0 256px;
+}
+
+.footer-icon {
+    width: 50%;
+}
+
+#footer input {
+    width: 100%;
+    height: 100%;
+    background-color: #525252;
+    border: none;
+    font-size: 2rem;
+    padding-left: 24px;
+    color: white;
+    border: 1px solid lightgrey;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.5; /* Firefox */
+}
+
+#footer form {
+    display: flex;
+    height: 64px;
+    gap: 8px;
+}
+
+#footer a {
+    text-decoration: underline;
+}
+
+.footer-col {
+    flex: 1;
+    padding: 32px 48px 0 0;
+}
+
+.footer-row {
+    padding-bottom: 48px;
+}
+
+
+/* ROW A */
+#footer-row-A {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* columns: 400px; */
+}
+
+.list-item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link-button-list {
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: darkgreen; */
+}
+
+.social-link {
+    width: 32px;
+    height: 32px;
+    /* background-color: red; */
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ROW B */
+#footer-row-B {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-vertical-item-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;  
+}
+
+.payment-method-img {
+    width: 64px;
+}
+
+#payment-methods {
+    margin-top: 20px;
+}
+
+.footer-form-button {
+    background-color: var(--color-green);
+}
+
+/* ROW C*/
+#footer-row-C {
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 32px 0;
+}
+
+#prr-img {
+    width: 650px;
+}
+
+
+/* ROW D*/
+#footer-row-D {
+    /* background-color: chocolate; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+}
+
+/* ROW E*/
+#footer-row-E {
+    /* background-color: darkred; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+    gap: 32px;
+}
+
+
+
+.footer-horizontal-item-ul {
+    display: flex;
+    gap: 20px;
+}
+
+.list-item-content {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.list-item-img {
+    width: 32px;
+    height: 32px;
+    /* border: 1px solid white;
+    border-radius: 100%; */
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ROW C */
+

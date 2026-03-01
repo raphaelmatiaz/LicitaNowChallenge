@@ -4,6 +4,7 @@
 
 nav {
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100vw;
@@ -15,6 +16,20 @@ nav {
     justify-content: space-between;
     box-shadow: 1px 1px 32px rgb(32, 32, 32);
     opacity: 0.99;
+}
+
+#burger-menu {
+    width: 32px;
+    display: none;
+}
+
+#navbar-mobile {
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
 }
 
 #logo {
@@ -49,24 +64,30 @@ em {
 
 #hero-top-half-left {
     flex: 4;
-    
+    /* background-color: red; */
+
 }
 
 #hero-cta-buttons {
     display: flex;
     gap: 32px;
+    margin-top: 32px;
     /* justify-content: space-between; */
     
 }
 
 #hero-top-half-right {
     flex: 4;
+    box-shadow: 16px -16px 48px rgb(0, 0, 0) inset;
+    border: 8px solid #535353;
 }
 
-#hero-img {
-    width: 100%;
-    height: 100%;
+.hero-img {
+
     display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-bottom-left-radius: 276px;
     border-top-left-radius: 85px;
     border-top-right-radius: 45px;
@@ -109,8 +130,76 @@ em {
 
 .numeric-context {
     font-size: 2rem;
-    border-top: 2px solid white;
+
+    text-align: center;
 }
 
 
 
+@media (max-width: 1200px) {
+    .numeric-context {
+         overflow-wrap: break-word;
+         max-width: 200px;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 1263px) {
+    #navbar-options {
+        display: none;
+    }
+
+    #burger-menu {
+        display: block;
+    }
+
+    
+}
+
+@media (max-width: 1355px) { 
+
+#hero-top-half-right {
+        display: none;
+        flex: 0;
+    }
+
+#hero-top-half-left {
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#left-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    max-width: 80rem;
+    text-align: center;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    padding: 20rem 10rem;
+}
+
+#hero-bottom-half {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 8rem;
+    /* background-color: blue; */
+}
+
+
+
+h2 {
+    padding: 16px 2%;
+}
+}

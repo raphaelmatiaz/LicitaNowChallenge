@@ -1,0 +1,132 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    color: #FFF;
+}
+
+section {
+    padding: 20rem;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 5.6rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    letter-spacing: 20%;
+    padding: 0 48px;
+}
+
+h3 {
+    font-size: 2.4rem;
+    font-weight: 200;
+    letter-spacing: 35%;
+    padding-left: 32px;
+}
+
+h4 {
+    font-size: 3.2rem;
+    margin: 24px 0 40px 0;
+}
+
+h5 {
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+h6 {
+    font-size: 2.4rem;
+}
+
+
+/* #categorias-de-concurso h4 { 
+    margin: 24px 0 40px 0;
+} */
+
+/* #categorias-de-concurso h3 {
+    padding-left: 32px;
+} */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    padding: 16px 44px;
+    border: none;
+    font-size: 2rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* CLASSES */
+
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-size: 6.4rem;
+}
+
+.section-header {
+    border-left: 8px solid grey;
+    padding-left: 28px;
+}
+
+.section-header-wrapper {
+    max-width: 35%;
+    margin-bottom: 88px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
